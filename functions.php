@@ -89,20 +89,22 @@ function register_contatos() {
     criarCategoria('Telefone Fixo', 'contatos_categories', 'telefone_fixo');
     criarCategoria('Instagram', 'contatos_categories', 'instragram');
     criarCategoria('Facebook', 'contatos_categories', 'facebook');
-    criarCategoria('Mapa', 'contatos_categories', 'mapa');
+    criarCategoria('Mapa Link', 'contatos_categories', 'mapa_link');
+    criarCategoria('Mapa Iframe', 'contatos_categories', 'mapa_iframe');
     criarCategoria('Endereço', 'contatos_categories', 'endereco');
-    criarCategoria('Email', 'contatos_categories', 'email');
-    criarCategoria('Horário Atendimento', 'contatos_categories', 'horario_atendimento');
+    //criarCategoria('Email', 'contatos_categories', 'email');
+    //criarCategoria('Horário Atendimento', 'contatos_categories', 'horario_atendimento');
     criarCategoria('Cookies', 'contatos_categories', 'cookies');
 
-    criarPost("Whatsapp", "contatos", "whatsapp", "contatos_categories", "51999999999");
-    criarPost("Telefone Fixo", "contatos", "telefone_fixo", "contatos_categories", "51999999999");
-    criarPost("Facebook", "contatos", "facebook", "contatos_categories", "https://www.facebook.com/teste");
-    criarPost("Instagram", "contatos", "instagram", "contatos_categories", "https://www.instagram.com/teste");
-    criarPost("Mapa", "contatos", "mapa", "contatos_categories", "https://goo.gl/maps/RkYdaELqdHq4PDs18");
-    criarPost("Endereço", "contatos", "endereco", "contatos_categories", "Rodovia, ERS-413, 3655 - Moinhos d'Água, Lajeado - RS, 95904-500");
-    criarPost("Email", "contatos", "email", "contatos_categories", "teste@email.com");
-    criarPost("Horário Atendimento", "contatos", "horario_atendimento", "contatos_categories", "Segunda a Sexta-feira das 8 as 18h.");
+    criarPost("Whatsapp", "contatos", "whatsapp", "contatos_categories", "51999073823");
+    criarPost("Telefone Fixo", "contatos", "telefone_fixo", "contatos_categories", "5133141061");
+    criarPost("Facebook", "contatos", "facebook", "contatos_categories", "https://www.facebook.com/pasqualottocarcenter");
+    criarPost("Instagram", "contatos", "instagram", "contatos_categories", "https://www.instagram.com/pasqualottocarcenter");
+    criarPost("Mapa Link", "contatos", "mapa_link", "contatos_categories", "https://goo.gl/maps/5qJyjF5xdhJdgNEB7");
+    criarPost("Mapa Iframe", "contatos", "mapa_iframe", "contatos_categories", "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13860.228553649222!2d-52.4342757!3d-29.7181041!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7f09b5d0085dbfb5!2sGarbin%20Pneus%20-%20Santa%20Cruz%20-%20Revenda%20Michelin!5e0!3m2!1spt-BR!2sbr!4v1648685669114!5m2!1spt-BR!2sbr");
+    criarPost("Endereço", "contatos", "endereco", "contatos_categories", "Rua Livramento, 35, Boqueirão - Passo Fundo - RS");
+    //criarPost("Email", "contatos", "email", "contatos_categories", "teste@email.com");
+    //criarPost("Horário Atendimento", "contatos", "horario_atendimento", "contatos_categories", "Segunda a Sexta-feira das 8 as 18h.");
     criarPost("Cookies", "contatos", "cookies", "contatos_categories", "Este site utiliza cookies para melhorar sua experiência!");
 }
 

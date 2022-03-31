@@ -12,55 +12,59 @@ Version: 1. 0. 0.;
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 :root {
-  --black: #000;
-  --white: #fff;
-  --gray: #5f5f5f;
+    --black: #000;
+    --white: #fff;
+    --gray: #5f5f5f;
 
-  --text-white-color: #f1f1f1;
-  --text-black-color: #1c1c1c;
-  --icons-color: #5f5f5f;
+    --text-white-color: #f1f1f1;
+    --text-black-color: #1c1c1c;
+    --icons-color: #5f5f5f;
 
-  --site-first-color: #00a74e;
-  --site-second-color: #12141a;
-  --site-third-color: #5f5f5f;
+    --site-first-color: #d72b2b;
+    --site-second-color: #ffcc2a;
+    --site-third-color: #000;
 
-  --facebook: #3b5998;
-  --instagram: #b7242a;
-  --whatsapp: #25d366;
+    --facebook: #3b5998;
+    --instagram: #b7242a;
+    --whatsapp: #25d366;
 
-  --gradient: linear-gradient(120deg, var(--site-second-color) 0%, var(--text-white-color) 40%);
+    --gradient: linear-gradient(
+        120deg,
+        var(--site-second-color) 0%,
+        var(--text-white-color) 40%
+    );
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--text-white-color);
+    background: var(--text-white-color);
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--site-third-color);
-  border-radius: 10px;
+    background: var(--site-third-color);
+    border-radius: 10px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
-  transition: ease-in-out 0.3s;
+    background: #555;
+    transition: ease-in-out 0.3s;
 }
 
 * {
-  font: normal normal normal 18px/36px "Roboto", sans-serif;
+    font: normal normal normal 18px/36px "Roboto", sans-serif;
 }
 
 body {
-  background-color: var(--text-white-color);
-  background: var(--text-white-color);
-  color: var(--text-black-color);
+    background-color: var(--text-white-color);
+    background: var(--text-white-color);
+    color: var(--text-black-color);
 }
 
 ul {
@@ -69,26 +73,26 @@ ul {
 
 a,
 p {
-  text-decoration: none;
-  color: var(--text-black-color);
+    text-decoration: none;
+    color: var(--text-black-color);
 }
 
 a:hover,
 button:hover {
-  text-decoration: none;
-  color: var(--text-black-color);
-  filter: brightness(1.2);
-  transition: ease-in-out 0.3s;
+    text-decoration: none;
+    color: var(--text-black-color);
+    filter: brightness(1.2);
+    transition: ease-in-out 0.3s;
 }
 
 a:active,
 button:active {
-  filter: brightness(0.7);
-  transition: ease-in-out 0.3s;
+    filter: brightness(0.7);
+    transition: ease-in-out 0.3s;
 }
 
 svg {
-  color: var(--icons-color);
+    color: var(--icons-color);
 }
 
 h1,
@@ -97,42 +101,42 @@ h3,
 h4,
 h5,
 h6 {
-  font: normal normal bold 18px/36px "Roboto Condensed", sans-serif;
+    font: normal normal bold 18px/36px "Roboto Condensed", sans-serif;
 }
 
 h1 {
-  font-size: 42px;
-  line-height: 48px;
-  text-transform: uppercase;
-  margin-bottom: 40px;
+    font-size: 42px;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
 }
 
 h2 {
-  font-size: 36px;
-  line-height: 42px;
-  text-transform: uppercase;
-  margin-bottom: 36px;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    margin-bottom: 36px;
 }
 
 h3 {
-  font-size: 28px;
-  line-height: 40px;
-  text-transform: capitalize;
-  margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 40px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
 }
 
 h4 {
-  font-size: 26px;
-  line-height: 38px;
-  text-transform: capitalize;
-  margin-bottom: 26px;
+    font-size: 26px;
+    line-height: 38px;
+    text-transform: capitalize;
+    margin-bottom: 26px;
 }
 
 h5 {
-  font-size: 24px;
-  line-height: 36px;
-  text-transform: capitalize;
-  margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 36px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
 }
 
 p {
@@ -162,80 +166,152 @@ button.secundario {
     background: var(--site-second-color);
 }
 
+button p {
+    color: var(--text-white-color);
+    font-weight: bold;
+}
+
 button:active {
     filter: brightness(0.7);
     transition: ease-in-out 0.3s;
 }
 
+input, textarea {
+    padding: 16px 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: none;
+}
+
+input {
+    max-height: 55px;
+}
+
+input:active, textarea:active {
+    outline: #000;
+    transition: ease-in-out 0.3s;
+}
+
+.primario svg {
+    color: var(--text-white-color);
+}
+
+.bg-second-color {
+    background: var(--site-second-color);
+}
+
+.gap-1 {
+    gap: 10px;
+}
+
+.gap-2 {
+    gap: 20px;
+}
+
+.gap-3 {
+    gap: 30px;
+}
+
+.gap-4 {
+    gap: 40px;
+}
+
+.gap-5 {
+    gap: 50px;
+}
+
+nav::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    width: 100px;
+    height: 100%;
+    background: var(--site-second-color);
+    transform: skewX(37deg);
+    z-index: -1;
+}
+
+nav::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 200px;
+    height: 100%;
+    background: #ffcc2a;
+    transform: skewX(-37deg);
+    z-index: -1;
+}
+
 #progress-bar {
-  --scrollAmount: 0%;
-  background-image: linear-gradient(120deg, var(--site-second-color) 0%, var(--site-first-color) 100%);
-  width: var(--scrollAmount);
-  height: 10px;
-  position: relative;
+    --scrollAmount: 0%;
+    background-image: linear-gradient(
+        120deg,
+        var(--site-third-color) 0%,
+        var(--site-first-color) 100%
+    );
+    width: var(--scrollAmount);
+    height: 5px;
+    position: relative;
 }
 
 #home,
 #sobre-nos,
 #servicos,
 #contato {
-  height: 1200px;
+    height: 1200px;
 }
 
 .menu {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
 }
 .line {
-  fill: none;
-  stroke: black;
-  stroke-width: 6;
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .line1 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
 }
 .line2 {
-  stroke-dasharray: 60 60;
-  stroke-width: 6;
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
 }
 .line3 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
 }
 .opened .line1 {
-  stroke-dasharray: 90 207;
-  stroke-dashoffset: -134;
-  stroke-width: 6;
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
 }
 .opened .line2 {
-  stroke-dasharray: 1 60;
-  stroke-dashoffset: -30;
-  stroke-width: 6;
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
 }
 .opened .line3 {
-  stroke-dasharray: 90 207;
-  stroke-dashoffset: -134;
-  stroke-width: 6;
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
 }
 
 .logo {
     max-width: 265px;
-}
-
-.whats-btn {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  bottom: 30px;
-  right: 30px;
-  border-radius: 100px;
-  z-index: 1;
 }
 
 .nav-item .nav-link {
@@ -254,7 +330,11 @@ button:active {
 }
 
 #wpadminbar {
-  display: none;
+    display: none;
+}
+
+.contato-mapa {
+    gap: 20px;
 }
 
 .cookie-consent.inactive {
@@ -321,4 +401,29 @@ button:active {
 }
 .footer-social-link a svg.fa-instagram {
     background-color: var(--instagram);
+}
+
+.whats-btn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 100px;
+    z-index: 1;
+}
+
+.to-top-btn {
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 30px;
+    left: 30px;
+    background-color: var(--text-white-color);
+    border: 1px solid var(--icons-color);
+    border-radius: 4px;
+    z-index: 1;
 }

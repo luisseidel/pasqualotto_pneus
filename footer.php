@@ -1,4 +1,4 @@
-<footer>
+<footer class="bg-second-color">
     <section class="container">
 
         <div class="footer-info d-flex flex-column flex-lg-row justify-content-between">
@@ -22,25 +22,23 @@
                 switch ($titulo) {
                     case "cookies":
                         $cookies = (string) get_the_Content();
-                    case "email":
-                        $email = (string) get_the_content();
-                    case "endereco":
+                    case "endereço":
                         $endereco = (string) get_the_content();
                     case "facebook":
                         $facebook = (string) get_the_content();
-                    case "horário atendimento":
-                        $horario = (string) get_the_content();
                     case "instagram":
                         $instagram = (string) get_the_content();
-                    case "mapa":
+                    case "mapa link":
                         $mapa = (string) get_the_content();
+                    case "mapa iframe":
+                        $mapa_iframe = (string) get_the_content();
                     case "telefone fixo":
                         $telefone_fixo = (string) get_the_content();
                         $telefone_fixo = preg_replace('/\D/', '', $telefone_fixo);
                     case "whatsapp":
                         $whatsapp = (string) get_the_content();
                         $whatsapp = preg_replace('/\D/', '', $whatsapp);
-                        $whatsapp_link = "https://web.whatsapp.com/send?phone=55{$whatsapp}&amp;text=Ol%C3%A1%2C+vim+pelo+site+de+voc%C3%AAs%2C+poderia+me+ajudar%3F";
+                        $whatsapp_link = "https://api.whatsapp.com/send?phone=55{$whatsapp}&amp;text=Ol%C3%A1%2C+vim+pelo+site+de+voc%C3%AAs%2C+poderia+me+ajudar%3F";
                 }
 
             endwhile;
@@ -48,21 +46,32 @@
 
             <div class="footer-info-content">
                 <h4>Contato</h4>
-                <a href="<?= $whatsapp_link ?>" target="_blank">
-                    <p>
-                        <i class="fa-brands fa-whatsapp fa-lg"></i>
-                        <span><?= sprintf("(%s) %s-%s", substr($whatsapp, 0, 2), substr($whatsapp, 3, 5), substr($whatsapp, 6, (strlen($whatsapp) - 1))) ?></span>
-                    </p>
-                </a>
 
-                <a href="<?= "mailto:{$email}" ?>" target="_blank">
-                    <p>
-                        <i class="fa-solid fa-envelope fa-lg"></i>
-                        <span>
-                            <?= $email ?>
-                        </span>
-                    </p>
-                </a>
+                <div class="footer-social-link">
+                    <ul>
+                        <li>
+                            <a href="<?= $whatsapp_link ?>" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+55<?=$telefone_fixo?>">
+                                <i class="fa-solid fa-phone"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= $facebook ?>" target="_blank">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= $instagram ?>" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
             <div class="footer-info-content">
@@ -74,40 +83,12 @@
                     </p>
                 </a>
             </div>
-
-            <div class="footer-info-content">
-                <h4>Horário de Atendimento</h4>
-                <a href="#">
-                    <p>
-                        <i class="fa-solid fa-clock fa-lg"></i>
-                        <span> <?= $horario ?> </span>
-                    </p>
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="footer-social-link">
-            <ul>
-                <li>
-                    <a href="<?= $whatsapp_link ?>" target="_blank">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?= $facebook ?>" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?= $instagram ?>" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
         </div>
     </section>
+
+    <a class="to-top-btn" rel="noopener noreferrer" onclick="topFunction()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
     <a href="<?= $whatsapp_link ?>" class="whats-btn" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
@@ -120,7 +101,7 @@
             <p><?= $cookies ?></p>
         </div>
         <div class="cookie-accept">
-            <button onclick="acceptCookieConsent()" class="secundario">
+            <button onclick="acceptCookieConsent()" class="primario">
                 Aceitar
             </button>
         </div>
