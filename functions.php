@@ -52,9 +52,7 @@ add_action('init', 'register_banners');
 function register_banners() {
 
     criarPostType('Banners', 'Banner', 5, 'dashicons-images-alt2', 'banners');
-
     criarTaxonomia('banner_categories', 'banners', 'Categorias', 'Categoria');
-
     criarCategoria('Banner Desktop', 'banner_categories', 'banner-desktop');
     criarCategoria('Banner Mobile', 'banner_categories', 'banner-mobile');
 
@@ -66,23 +64,42 @@ add_action('init', 'register_sobrenos');
 function register_sobrenos() {
 
     criarPostType('Sobre Nós', 'Sobre Nós', 6, 'dashicons-media-text', 'sobrenos');
-
     criarTaxonomia('sobrenos_categories', 'sobrenos', 'Categorias', 'Categoria');
+    criarPost("Sobre Nós", "sobrenos", "sobrenos", "sobrenos_categories", "A Pasqualotto Pneus foi fundada em 1966, no coração do bairro Boqueirão, em Passo Fundo/RS, pela família Pasqualotto. A empresa busca constantemente, a modernização dos seus métodos, um ambiente acolhedor para a equipe e excelência no atendimento ao cliente. Em 2021, a empresa estabeleceu uma nova configuração societária e modernizou sua infraestrutura, incluindo serviços de Auto Center. Quando se trabalha com a equipe da Pasqualotto Pneus, o seu carro estará sendo cuidado por pessoas com anos de casa, apaixonadas pelo que fazem. Uma equipe que não muda e que cuida do seu carro como se ele fosse único. Capacidade técnica, comprometimento e união, é o que nos define!");
+}
+
+add_action('init', 'register_pneus');
+function register_pneus() {
+
+    criarPostType('Pneus', 'Pneu', 7, 'dashicons-admin-generic', 'pneus');
+    criarTaxonomia('pneus_categories', 'pneus', 'Categorias', 'Categoria');
+
+    criarPost("Dunlop", "pneus", "pneus", "pneus_categories", "");
+    criarPost("Delinte", "pneus", "pneus", "pneus_categories", "");
+    criarPost("Yokohama", "pneus", "pneus", "pneus_categories", "");
+    criarPost("Maxxis", "pneus", "pneus", "pneus_categories", "");
+    criarPost("Minerva", "pneus", "pneus", "pneus_categories", "");
+    criarPost("Falken", "pneus", "pneus", "pneus_categories", "");
 }
 
 add_action('init', 'register_servicos');
 function register_servicos() {
 
-    criarPostType('Serviços', 'Serviço', 7, 'dashicons-hammer', 'servicos');
-
+    criarPostType('Serviços', 'Serviço', 8, 'dashicons-hammer', 'servicos');
     criarTaxonomia('servicos_categories', 'servicos', 'Categorias', 'Categoria');
+
+    criarPost("Vulcanização", "servicos", "servicos", "servicos_categories", "");
+    criarPost("Geometria 3D", "servicos", "servicos", "servicos_categories", "");
+    criarPost("Balanceamento", "servicos", "servicos", "servicos_categories", "");
+    criarPost("Suspensão", "servicos", "servicos", "servicos_categories", "");
+    criarPost("Freios", "servicos", "servicos", "servicos_categories", "");
+    criarPost("Troca de Óleo e Filtros", "servicos", "servicos", "servicos_categories", "");
 }
 
 add_action('init', 'register_contatos');
 function register_contatos() {
 
-    criarPostType('Contatos', 'Contato', 8, 'dashicons-share', 'contatos');
-
+    criarPostType('Contatos', 'Contato', 9, 'dashicons-share', 'contatos');
     criarTaxonomia('contatos_categories', 'contatos', 'Categorias', 'Categoria');
 
     criarCategoria('Whatsapp', 'contatos_categories', 'whatsapp');
@@ -96,8 +113,8 @@ function register_contatos() {
     //criarCategoria('Horário Atendimento', 'contatos_categories', 'horario_atendimento');
     criarCategoria('Cookies', 'contatos_categories', 'cookies');
 
-    criarPost("Whatsapp", "contatos", "whatsapp", "contatos_categories", "51999073823");
-    criarPost("Telefone Fixo", "contatos", "telefone_fixo", "contatos_categories", "5133141061");
+    criarPost("Whatsapp", "contatos", "whatsapp", "contatos_categories", "54999073823");
+    criarPost("Telefone Fixo", "contatos", "telefone_fixo", "contatos_categories", "5433141061");
     criarPost("Facebook", "contatos", "facebook", "contatos_categories", "https://www.facebook.com/pasqualottocarcenter");
     criarPost("Instagram", "contatos", "instagram", "contatos_categories", "https://www.instagram.com/pasqualottocarcenter");
     criarPost("Mapa Link", "contatos", "mapa_link", "contatos_categories", "https://goo.gl/maps/5qJyjF5xdhJdgNEB7");

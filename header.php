@@ -10,7 +10,13 @@
     <?php wp_head(); ?>
 </head>
 
-<body data-spy="scroll" data-offset="200" data-target="#openCloseMenu" class="pt-5" tabindex="0">
+<style>
+    html {
+        margin: 0 !important;
+    }
+</style>
+
+<body data-spy="scroll" data-offset="200" data-target="#openCloseMenu" class="" tabindex="0">
 
     <?php
     $logo_id = get_theme_mod('custom_logo');
@@ -48,6 +54,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#sobre-nos">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pneus">Pneus</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#servicos">Serviços</a>
