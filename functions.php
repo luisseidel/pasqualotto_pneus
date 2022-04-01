@@ -88,12 +88,12 @@ function register_servicos() {
     criarPostType('Serviços', 'Serviço', 8, 'dashicons-hammer', 'servicos');
     criarTaxonomia('servicos_categories', 'servicos', 'Categorias', 'Categoria');
 
-    criarPost("Vulcanização", "servicos", "servicos", "servicos_categories", "");
-    criarPost("Geometria 3D", "servicos", "servicos", "servicos_categories", "");
-    criarPost("Balanceamento", "servicos", "servicos", "servicos_categories", "");
-    criarPost("Suspensão", "servicos", "servicos", "servicos_categories", "");
-    criarPost("Freios", "servicos", "servicos", "servicos_categories", "");
-    criarPost("Troca de Óleo e Filtros", "servicos", "servicos", "servicos_categories", "");
+    criarPost("Vulcanização", "servicos", "servicos", "servicos_categories", "A vulcanização é utilizada como forma de dar um reaproveitamento em pneus, que de certa forma, sofreram algum dano na sua estrutura original. Ela faz com que eles tenham uma “vida útil” mais prolongada, devido a maneira com a vulcanização é realizada. De todos os processos de reparação de danos em pneus, a vulcanização é maneira mais segura e confiável.");
+    criarPost("Geometria 3D", "servicos", "servicos", "servicos_categories", "Tecnologia de última geração, recomendado pelos principais fabricantes mundiais de Automóveis e Pneus. Garantimos o ajuste de acordo com os parâmetros do fabricante do veículo.");
+    criarPost("Balanceamento", "servicos", "servicos", "servicos_categories", "O balanceamento é um procedimento que equilibra o conjunto roda/pneu/válvula ou câmara do veículo por meio de contrapesos de chumbo. A sua função é melhorar a estabilidade do veículo e consequentemente, a dirigibilidade.");
+    criarPost("Suspensão", "servicos", "servicos", "servicos_categories", "A suspensão é o sistema de molas, amortecedores e braços utilizados para reduzir o impacto da irregularidade da pista aos ocupantes do veículo. A suspensão também é responsável pela estabilidade do veículo.");
+    criarPost("Freios", "servicos", "servicos", "servicos_categories", "Os freios de um automóvel não possuem a função de parar o mesmo, na verdade, a função dos freios é reduzir a velocidade da roda até a imobilização daquele. Para realizar tal função, o sistema de freio automotivo se utiliza de importantes conceitos físicos, mas que não o fazem complexo ou complicado de compreender, manter e executar reparos.");
+    criarPost("Troca de Óleo e Filtros", "servicos", "servicos", "servicos_categories", "A troca de óleo consiste na substituição de lubrificantes e de filtros. Trabalhamos com os melhores lubrificantes e observamos a manutenção recomendada conforme o manual do proprietário do veículo.");
 }
 
 add_action('init', 'register_contatos');

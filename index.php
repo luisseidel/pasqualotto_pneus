@@ -120,7 +120,7 @@
                 $imagem_destaque_pneu = (string) get_the_post_thumbnail_url(get_the_ID());
             ?>
                 <div class="single-pneu my-2">
-                    <?= $titulo_pneu ?>
+                    <img src="<?= $imagem_destaque_pneu ?>" alt="<?= $titulo_pneu ?>" />
                 </div>
             <?php endwhile; ?>
         </div>
@@ -165,32 +165,31 @@
                 $texto_servico = (string) get_the_content();
                 $imagem_destaque_servico = (string) get_the_post_thumbnail_url(get_the_ID());
             ?>
-                <div class="card-servico my-2">
+                <div class="card-servico my-2 <?= (($texto_servico && strlen($texto_servico) ? "pointer-cursor" : "")) ?>" data-toggle="modal" data-target="<?= "#{$servico_slug}" ?>">
                     <div class="card-img">
-                        <img src="<?= $imagem_destaque_servico ?>" />
-                    </div>
-
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h5><?= $titulo_servico ?></h5>
+                        <img src="<?= $imagem_destaque_servico ?>" alt="<?= $titulo_servico ?>" class="servico-image" />
+                        <div class="servico-title">
+                            <h5 class="servico-title-text"><?= $titulo_servico ?></h5>
                         </div>
                     </div>
-                    <? if ($texto_servico) : ?>
 
-                        <button type="button" class="btn btn-primary" data-toggle="#<?= $servico_slug ?>" data-target=".bd-example-modal-lg">Large modal</button>
-
+                    <?php if ($texto_servico && strlen($texto_servico) > 1) : ?>
                         <div class="modal fade bd-example-modal-lg" tabindex="-1" id="<?= $servico_slug ?>" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
-                                    <div class="card-text">
-                                        <p>
-                                            <?= $texto_servico ?>
-                                        </p>
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"><?= $titulo_servico ?></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><?= $texto_servico ?></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <? endif; ?>
+                    <?php endif; ?>
                 </div>
             <?php endwhile; ?>
         </div>
@@ -202,7 +201,7 @@
 
         <div class="contato-mapa d-flex flex-column flex-lg-row justify-content-between">
             <div class="contato w-100">
-                <form action="" method="post" class="contato-form d-flex flex-column gap-2" target="_blank">
+                <form action="" method="post" class="contato-form d-flex flex-column gap-5" target="_blank">
                     <?php
                     $args = array(
                         'post_type' => 'contatos',
