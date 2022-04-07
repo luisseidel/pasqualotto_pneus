@@ -87,7 +87,7 @@
         </div>
 
         <div class="py-5 text-center">
-            <img src="<?= $imagem_destaque_url ?>" alt="sobre-nos" />
+            <img src="<?= $imagem_destaque_url ?>" class="w-lg-50 w-xsm-100" alt="sobre-nos" />
         </div>
     </section>
 

@@ -23,7 +23,7 @@
     $logo_url = wp_get_attachment_image_src($logo_id, 'full');
 
     if ($logo_url != null && $logo_url != "") :
-        $logo_img =  "<img src='{$logo_url[0]}' alt='logo' />";
+        $logo_img =  "<img src='{$logo_url[0]}' alt='logo' class='logo' />";
         $logo = $logo_img;
     else :
         $logo = get_bloginfo('name');
@@ -35,7 +35,7 @@
         <nav class="navbar navbar-expand-lg navbar-light container justify-content-between bg-second-color">
             <div class="container-fluid">
 
-                <a href="<?= get_site_url(); ?>" class="logo">
+                <a href="<?= get_site_url(); ?>">
                     <?= $logo ?>
                 </a>
 
