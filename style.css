@@ -244,8 +244,8 @@ section+section {
     margin: 50px 0;
 }
 
-section+section img {
-    border-radius: 4px;
+#sobre-nos img {
+    border-radius: 15px;
 }
 
 .fixed-top {
@@ -327,6 +327,7 @@ section+section img {
     border-bottom: 2px solid transparent;
     border-radius: 0;
     font-family: "Roboto Condensed";
+    font-weight: 700;
 }
 
 #openCloseMenu .nav-pills .nav-link.active,
@@ -343,15 +344,14 @@ section+section img {
 .swiper-slide img {
     object-fit: cover;
     width: 100%;
-    height: 500px;
-    filter: brightness(0.7);
+    height: auto;
 }
 
 .single-pneu img {
     width: 300px;
     height: 400px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 15px;
 }
 
 .card-img {

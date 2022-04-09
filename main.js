@@ -27,12 +27,13 @@ window.onscroll = function () {
 function scrollFunction() {
     toTopButton = document.querySelector(".to-top-btn");
 
-    if (
+    if (toTopButton &&
+        toTopButton.classList.contains('d-block') &&
         document.body.scrollTop > 20 ||
         document.documentElement.scrollTop > 20
     ) {
         toTopButton.classList.add("d-block");
-    } else {
+    } else if (toTopButton) {
         toTopButton.classList.remove("d-block");
     }
 }
@@ -100,9 +101,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //slider mobile config
-    if (document.querySelector(".slider-banner.mobile")) {
+    if (document.querySelector("#banner-mobile")) {
         var slider = tns({
-            container: ".slider-banner.mobile",
+            container: "#banner-mobile",
             items: 1,
             slideBy: "page",
             autoplay: true,
@@ -115,9 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //slider desktop config
-    if (document.querySelector(".slider-banner.desktop")) {
+    if (document.querySelector("#banner-desktop")) {
         var slider = tns({
-            container: ".slider-banner.desktop",
+            container: "#banner-desktop",
             items: 1,
             slideBy: "page",
             autoplay: true,

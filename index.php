@@ -4,7 +4,7 @@
     <section class="banners" id="home">
 
         <div class="banner-container">
-            <div class="slider-banner mobile">
+            <div class="slider-banner d-none d-lg-block" id="banner-desktop">
 
                 <?php
                 $args = array(
@@ -36,17 +36,37 @@
                 <?php endwhile; ?>
             </div>
 
-            <!-- <div class="slider-banner desktop">
-                <?php global $post;
-                $args = array('numberposts' => 5, 'category_name' => 'banner-desk');
-                $posts = get_posts($args);
-                foreach ($posts as $post) : setup_postdata($post); ?>
+            <div class="slider-banner d-xs-block d-sm-block d-md-block d-lg-none" id="banner-mobile">
+
+                <?php
+                $args = array(
+                    'post_type' => 'banners',
+                    'post_status' => 'publish',
+                    'posts_per_page' => 3,
+                    'tax_query' => [
+                        [
+                            'taxonomy'  => 'banner_categories',
+                            'field'     => 'slug',
+                            'terms'     => 'banner-mobile',
+                        ]
+                    ],
+                    'orderby' => 'title',
+                    'order' => 'ASC',
+                );
+
+                $loop = new WP_Query($args);
+
+                while ($loop->have_posts()) :
+                    $loop->the_post();
+
+                    $sobre_nos = (string) get_the_content();
+                ?>
                     <div class="swiper-slide">
                         <?php the_post_thumbnail(); ?>
                         <div class="slider-text"><?php the_content(); ?></div>
                     </div>
-                <?php endforeach; ?>
-            </div> -->
+                <?php endwhile; ?>
+            </div>
         </div>
     </section>
 

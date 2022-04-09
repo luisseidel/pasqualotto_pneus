@@ -29,10 +29,11 @@ function add_widget_Support() {
 }
 add_action('widgets_init', 'add_Widget_Support');
 
+
+
 function add_Main_Nav() {
     register_nav_menu('header-menu', __('Header Menu'));
 }
-// Hook to the init action hook, run our navigation menu function
 add_action('init', 'add_Main_Nav');
 
 add_theme_support('custom-logo');
@@ -45,7 +46,6 @@ add_theme_support('custom-logo', array(
 ));
 
 add_theme_support('post-thumbnails');
-
 
 
 add_action('init', 'register_banners');
