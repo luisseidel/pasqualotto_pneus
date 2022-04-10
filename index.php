@@ -206,7 +206,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <p><?= $texto_servico ?></p>
+                                        <p class="text-justify"><?= $texto_servico ?></p>
                                     </div>
                                 </div>
                             </div>

@@ -55,7 +55,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="tel:+55<?=$telefone_fixo?>">
+                            <a href="tel:+55<?= $telefone_fixo ?>">
                                 <i class="fa-solid fa-phone"></i>
                             </a>
                         </li>
@@ -98,7 +98,7 @@
 
     <div id="cookieNotice" class="cookie-consent d-flex flex-column flex-lg-row justify-content-center align-items-center w-100">
         <div class="cookie-content">
-            <p><?= $cookies ?></p>
+            <p class="text-center"><?= $cookies ?></p>
         </div>
         <div class="cookie-accept">
             <button onclick="acceptCookieConsent()" class="primario">

@@ -129,21 +129,18 @@ h2 {
 h3 {
     font-size: 28px;
     line-height: 40px;
-    text-transform: capitalize;
     margin-bottom: 30px;
 }
 
 h4 {
     font-size: 26px;
     line-height: 38px;
-    text-transform: capitalize;
     margin-bottom: 26px;
 }
 
 h5 {
     font-size: 24px;
     line-height: 36px;
-    text-transform: capitalize;
     margin-bottom: 20px;
 }
 
@@ -417,10 +414,6 @@ section+section {
     z-index: 2;
 }
 
-.cookie-consent .cookie-content {
-    margin-right: 50px;
-}
-
 .footer-info-content {
     margin: 30px 0;
 }
@@ -524,6 +517,10 @@ section+section {
         background: #ffcc2a;
         transform: skewX(-37deg);
         z-index: -1;
+    }
+
+    .cookie-consent .cookie-content {
+        margin-right: 50px;
     }
 }
 
