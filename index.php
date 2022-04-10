@@ -101,14 +101,16 @@
         ?>
 
         <div class="sobre-content">
-            <p>
+            <p class="text-justify">
                 <?= $sobre_nos ?>
             </p>
         </div>
 
-        <div class="py-5 text-center">
-            <img src="<?= $imagem_destaque_url ?>" class="w-lg-50 w-xsm-100" alt="sobre-nos" />
-        </div>
+        <?php if ($imagem_destaque_url) : ?>
+            <div class="py-5 text-center">
+                <img src="<?= $imagem_destaque_url ?>" class="w-lg-50 w-xsm-100" alt="sobre-nos" />
+            </div>
+        <?php endif; ?>
     </section>
 
     <section class="container" id="pneus">
