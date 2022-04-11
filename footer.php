@@ -102,7 +102,7 @@
         </div>
         <div class="cookie-accept">
             <button onclick="acceptCookieConsent()" class="primario">
-                Aceitar
+                Continuar
             </button>
         </div>
     </div>
