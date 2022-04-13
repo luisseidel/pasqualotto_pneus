@@ -50,19 +50,19 @@
                 <div class="collapse navbar-collapse justify-content-end" id="openCloseMenu">
                     <ul class="navbar-nav nav-pills">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
+                            <a class="nav-link" href="#home" onclick="closeMenu()">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sobre-nos">Sobre Nós</a>
+                            <a class="nav-link" href="#pneus" onclick="closeMenu()">Pneus</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#pneus">Pneus</a>
+                            <a class="nav-link" href="#servicos" onclick="closeMenu()">Serviços</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#servicos">Serviços</a>
+                            <a class="nav-link" href="#sobre-nos" onclick="closeMenu()">Sobre Nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contato">Contato</a>
+                            <a class="nav-link" href="#contato" onclick="closeMenu()">Contato</a>
                         </li>
                     </ul>
                 </div>

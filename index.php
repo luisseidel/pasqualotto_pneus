@@ -71,48 +71,6 @@
     </section>
 
 
-    <section class="container" id="sobre-nos">
-        <h1>Sobre Nós</h1>
-
-        <?php
-        $args = array(
-            'post_type' => 'sobrenos',
-            'post_status' => 'publish',
-            'posts_per_page' => 1,
-            'tax_query' => [
-                [
-                    'taxonomy'  => 'sobrenos_categories',
-                    'field'     => 'slug',
-                    'terms'     => 'sobrenos',
-                ]
-            ],
-            'orderby' => 'title',
-            'order' => 'ASC',
-        );
-
-        $loop = new WP_Query($args);
-
-        if ($loop->have_posts()) :
-            $loop->the_post();
-
-            $sobre_nos = (string) get_the_content();
-            $imagem_destaque_url = (string) get_the_post_thumbnail_url(get_the_ID());
-        endif;
-        ?>
-
-        <div class="sobre-content">
-            <p class="text-justify">
-                <?= $sobre_nos ?>
-            </p>
-        </div>
-
-        <?php if ($imagem_destaque_url) : ?>
-            <div class="py-5 text-center">
-                <img src="<?= $imagem_destaque_url ?>" class="w-lg-50 w-xsm-100" alt="sobre-nos" />
-            </div>
-        <?php endif; ?>
-    </section>
-
     <section class="container" id="pneus">
         <h1>Pneus</h1>
 
@@ -193,6 +151,12 @@
                         <div class="servico-title">
                             <h5 class="servico-title-text"><?= $titulo_servico ?></h5>
                         </div>
+                        <?php if ($texto_servico && strlen($texto_servico) > 1) : ?>
+                            <div class="servico-saiba-mais">
+                                <h6>Clique e saiba mais</h6>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        <?php endif; ?>
                     </div>
 
                     <?php if ($texto_servico && strlen($texto_servico) > 1) : ?>
@@ -218,11 +182,54 @@
 
     </section>
 
+    <section class="container" id="sobre-nos">
+        <h1>Sobre Nós</h1>
+
+        <?php
+        $args = array(
+            'post_type' => 'sobrenos',
+            'post_status' => 'publish',
+            'posts_per_page' => 1,
+            'tax_query' => [
+                [
+                    'taxonomy'  => 'sobrenos_categories',
+                    'field'     => 'slug',
+                    'terms'     => 'sobrenos',
+                ]
+            ],
+            'orderby' => 'title',
+            'order' => 'ASC',
+        );
+
+        $loop = new WP_Query($args);
+
+        if ($loop->have_posts()) :
+            $loop->the_post();
+
+            $sobre_nos = (string) get_the_content();
+            $imagem_destaque_url = (string) get_the_post_thumbnail_url(get_the_ID());
+        endif;
+        ?>
+
+        <div class="sobre-content">
+            <p class="text-justify">
+                <?= $sobre_nos ?>
+            </p>
+        </div>
+
+        <?php if ($imagem_destaque_url) : ?>
+            <div class="py-5 text-center">
+                <img src="<?= $imagem_destaque_url ?>" class="w-lg-50 w-xsm-100" alt="sobre-nos" />
+            </div>
+        <?php endif; ?>
+    </section>
+
     <section class="container" id="contato">
         <h1>Contato</h1>
 
         <div class="contato-mapa d-flex flex-column flex-lg-row justify-content-between">
             <div class="contato w-100">
+                <h3>ENTRE EM CONTATO COM NOSSA EQUIPE!</h3>
                 <form action="" method="post" class="contato-form d-flex flex-column gap-5" target="_blank">
                     <?php
                     $args = array(

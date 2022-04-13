@@ -56,7 +56,13 @@ function register_banners() {
     criarCategoria('Banner Desktop', 'banner_categories', 'banner-desktop');
     criarCategoria('Banner Mobile', 'banner_categories', 'banner-mobile');
 
-    criarPost("Banner Desk/Mobile", "banners", ["banner-desktop", "banner-mobile"], "banner_categories");
+    //criarPost("Banner Desk/Mobile", "banners", ["banner-desktop", "banner-mobile"], "banner_categories");
+
+    criarPost("Banner Desk 1", "banners", "banner-desktop", "banner_categories");
+    criarPost("Banner Desk 2", "banners", "banner-desktop", "banner_categories");
+
+    criarPost("Banner Mobile 1", "banners", "banner-mobile", "banner_categories");
+    criarPost("Banner Mobile 2", "banners", "banner-mobile", "banner_categories");
 }
 
 
@@ -117,8 +123,8 @@ function register_contatos() {
     criarPost("Telefone Fixo", "contatos", "telefone_fixo", "contatos_categories", "5433141061");
     criarPost("Facebook", "contatos", "facebook", "contatos_categories", "https://www.facebook.com/pasqualottocarcenter");
     criarPost("Instagram", "contatos", "instagram", "contatos_categories", "https://www.instagram.com/pasqualottocarcenter");
-    criarPost("Mapa Link", "contatos", "mapa_link", "contatos_categories", "https://goo.gl/maps/5qJyjF5xdhJdgNEB7");
-    criarPost("Mapa Iframe", "contatos", "mapa_iframe", "contatos_categories", "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13860.228553649222!2d-52.4342757!3d-29.7181041!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7f09b5d0085dbfb5!2sGarbin%20Pneus%20-%20Santa%20Cruz%20-%20Revenda%20Michelin!5e0!3m2!1spt-BR!2sbr!4v1648685669114!5m2!1spt-BR!2sbr");
+    criarPost("Mapa Link", "contatos", "mapa_link", "contatos_categories", "https://goo.gl/maps/qmp5atEpZCmaeuTN9");
+    criarPost("Mapa Iframe", "contatos", "mapa_iframe", "contatos_categories", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3513.97537657027!2d-52.42799098544859!3d-28.268763457922066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e2bf5fcb597073%3A0x9c1b9e9064320994!2sPasqualotto%20Pneus%20Car%20Center!5e0!3m2!1spt-BR!2sbr!4v1649888354347!5m2!1spt-BR!2sbr");
     criarPost("Endereço", "contatos", "endereco", "contatos_categories", "Rua Livramento, 35, Boqueirão - Passo Fundo - RS");
     //criarPost("Email", "contatos", "email", "contatos_categories", "teste@email.com");
     //criarPost("Horário Atendimento", "contatos", "horario_atendimento", "contatos_categories", "Segunda a Sexta-feira das 8 as 18h.");

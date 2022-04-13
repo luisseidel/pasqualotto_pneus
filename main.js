@@ -1,19 +1,24 @@
-function show() {
-    const sidebar = document.querySelector("#slide-navbar-collapse");
-    sidebar.classList.add("show");
-    console.log(sidebar.classList);
-    document.body.style.overflow = "hidden";
+
+function closeMenu() {
+    if (document.querySelector("#openCloseMenu")) {
+        var menu = document.querySelector("#openCloseMenu");
+        
+        if (menu.classList.contains('show')) {
+            menu.classList.remove('show');
+        }
+    }
+
+    if (document.querySelector("#open-btn")) {
+        var btnAbrirFechar = document.querySelector("#open-btn");
+
+        if (btnAbrirFechar.classList.contains("opened")) {
+            btnAbrirFechar.classList.remove("opened");
+            btnAbrirFechar.classList.add("collapsed");
+            btnAbrirFechar.setAttribute('aria-expanded', btnAbrirFechar.classList.contains("opened"));
+        }
+    }
 }
-function hide() {
-    const sidebar = document.querySelector("#slide-navbar-collapse");
-    console.log(sidebar.classList);
-    document.body.style.overflow = "";
-}
-function toggle() {
-    const sidebar = document.querySelector("#slide-navbar-collapse");
-    console.log(sidebar.classList);
-    sidebar.classList.contains("show") ? hide() : show();
-}
+
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -25,16 +30,15 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-    toTopButton = document.querySelector(".to-top-btn");
-
-    if (toTopButton &&
-        toTopButton.classList.contains('d-block') &&
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-    ) {
-        toTopButton.classList.add("d-block");
-    } else if (toTopButton) {
-        toTopButton.classList.remove("d-block");
+    
+    if (document.querySelector(".to-top-btn")) {
+        var toTopButton = document.querySelector(".to-top-btn");
+        
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            toTopButton.classList.add("d-block");
+        } else {
+            toTopButton.classList.remove("d-block");
+        }
     }
 }
 
@@ -49,13 +53,8 @@ function acceptCookieConsent() {
     }
 }
 
-jQuery(document).ready(function ($) {
-    $("#nav-icon4").click(function () {
-        $(this).toggleClass("open");
-    });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
+
     //Scroll Progress Bar
     let processScroll = () => {
         let docElem = document.documentElement,
