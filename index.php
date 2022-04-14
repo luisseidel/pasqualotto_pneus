@@ -87,8 +87,8 @@
                         'terms'     => 'pneus',
                     ]
                 ],
-                'orderby' => 'title',
-                'order' => 'ASC',
+                'orderby' => 'date',
+                'order' => 'DESC',
             );
 
             $loop = new WP_Query($args);

@@ -10,6 +10,19 @@
     <?php wp_head(); ?>
 </head>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4F7Z9ZNH0"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EDQD29QHQY');
+</script>
+
 <style>
     html {
         margin: 0 !important;
